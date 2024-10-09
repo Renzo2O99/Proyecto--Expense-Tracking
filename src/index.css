@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*** SWIPE LIST OVERRIDES **/
+.swipeable-list-item__leading-actions, 
+.swipeable-list-item__trailing-actions {
+  @apply text-white text-lg uppercase font-bold;
+}
+.swipeable-list-item__leading-actions{
+  @apply bg-blue-600;
+}
+.swipeable-list-item__trailing-actions {
+  @apply bg-red-600;
+}
+.swipeable-list .swipe-action {
+  @apply flex justify-center items-center
+}
+
