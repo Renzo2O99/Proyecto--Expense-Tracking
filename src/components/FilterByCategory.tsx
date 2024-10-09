@@ -14,8 +14,10 @@ export const FilterByCategory = () => {
     <div className="bg-white shadow-lg rounded-lg p-10"> 
       <form>
         <div className="flex flex-col gap-5 md:flex-row md:items-center">
-          <label htmlFor="category">
-            Filtras Gastos
+          <label 
+            className="text-center text-gray-600 text-2xl font-bold"
+            htmlFor="category">
+            Filtrar Gastos
           </label>
 
           <select 

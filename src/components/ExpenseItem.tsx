@@ -36,7 +36,7 @@ export function ExpenseItem({ expense }: ExpenseItemProps) {
   const leadingActions = () => (
     <LeadingActions>
       <SwipeAction onClick={handleUpdate}>
-        <div className="flex items-center justify-center h-full bg-blue-500 text-white px-4">
+        <div className="flex items-center justify-center h-full bg-blue-500 text-white">
           <Edit2 size={24} />
         </div>
       </SwipeAction>
@@ -46,7 +46,7 @@ export function ExpenseItem({ expense }: ExpenseItemProps) {
   const trailingActions = () => (
     <TrailingActions>
       <SwipeAction onClick={handleDelete} destructive={true}>
-        <div className="flex items-center justify-center h-full bg-red-500 text-white px-4">
+        <div className="flex items-center justify-center h-full bg-red-500 text-white">
           <Trash2 size={24} />
         </div>
       </SwipeAction>
@@ -58,7 +58,7 @@ export function ExpenseItem({ expense }: ExpenseItemProps) {
       <SwipeableListItem
         leadingActions={leadingActions()}
         trailingActions={trailingActions()}>
-        <div className="relative space-y-4 flex items-center gap-4 sm:gap-5 bg-white shadow-md py-5 rounded-lg my-2 w-full border-b border-gray-200">
+        <div className="relative space-y-4 flex items-center px-4 gap-4 sm:gap-5 bg-white shadow-md py-5 rounded-lg my-2 w-full border-b border-gray-200">
           <div className="flex-shrink-0">
             <img
               src={`/icono_${categoryInfo?.icon}.svg`} 
