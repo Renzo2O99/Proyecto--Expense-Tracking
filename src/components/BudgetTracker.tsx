@@ -10,13 +10,14 @@ export const BudgetTracker = () => {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-      <div className="flex justify-center">
+      <div className="flex justify-center px-5">
         <CircularProgressbar 
           value={percentage}
+          className="font-semibold"
           styles={buildStyles({
             pathColor: percentage >= 80 ? '#DC2626' : '#3B82F6',
             trailColor: '#F5F5F5',
-            textSize: 8,
+            textSize: 9,
             textColor: percentage >= 80 ? '#DC2626' : '#3B82F6',
           })}
           text={`${percentage}% Gastado`}

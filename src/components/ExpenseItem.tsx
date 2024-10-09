@@ -58,7 +58,7 @@ export function ExpenseItem({ expense }: ExpenseItemProps) {
       <SwipeableListItem
         leadingActions={leadingActions()}
         trailingActions={trailingActions()}>
-        <div className="relative flex items-center gap-4 sm:gap-5 bg-white shadow-md p-5 my-2 sm:p-6 w-full border-b border-gray-200">
+        <div className="relative space-y-4 flex items-center gap-4 sm:gap-5 bg-white shadow-md py-5 rounded-lg my-2 w-full border-b border-gray-200">
           <div className="flex-shrink-0">
             <img
               src={`/icono_${categoryInfo?.icon}.svg`} 
@@ -81,7 +81,7 @@ export function ExpenseItem({ expense }: ExpenseItemProps) {
             </p>
           </div>
 
-          <div className="absolute top-1/3 right-9 sm:top-6 sm:right-6">
+          <div className="absolute top-1/4 right-9 sm:top-6 sm:right-6">
             <AmountDisplay
               amount={expense.expenseAmount}
             />

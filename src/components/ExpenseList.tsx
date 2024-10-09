@@ -18,7 +18,7 @@ export const ExpenseList = () => {
         <p className="text-center text-gray-600 text-2xl font-bold">No se encontraron gastos...</p> 
         : (
           <>
-            <p className="text-center text-gray-600 text-2xl font-bold-my-5">
+            <p className="text-center text-gray-600 text-2xl font-bold mb-5">
               {filteredExpenses.length === 0 ? `No se han encontrado gastos relacionados` : 'Listado de Gastos'}
             </p>
 
