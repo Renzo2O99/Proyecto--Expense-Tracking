@@ -47,10 +47,6 @@ export const BudgetForm = () => {
         value="Definir Presupuesto"
         className="bg-blue-600 hover:bg-blue-700 cursor-pointer w-full p-2 text-white font-black uppercase rounded-lg disabled:opacity-50"
       />
-
-      <p className="overflow-hidden text-center mt-10 font-black text-4xl">
-        {budget}
-      </p>
     </form>
   )
 }
