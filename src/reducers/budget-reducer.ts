@@ -3,6 +3,9 @@ import { Category, DraftExpense, Expense } from "../types/types";
 
 export type BudgetActions =
   | { type: 'add-budget', payload: { budget: number } }
+  | { type: 'update-budget', payload: { budgetUpdate: number } }
+  | { type: 'show-modal-budget' }
+  | { type: 'close-modal-budget' }
   | { type: 'show-modal' }
   | { type: 'close-modal' }
   | { type: 'add-expense', payload: { expense: DraftExpense } }
@@ -15,6 +18,7 @@ export type BudgetActions =
 export interface BudgetState {
   budget: number;
   modal: boolean;
+  budgetModal: boolean;
   expense: Expense[];
   editingId: Expense['id'];
   currentCategory: Category['id']
@@ -33,6 +37,7 @@ const localStorageExpense = (): Expense[] => {
 export const initialState: BudgetState = {
   budget: initialBudget(),
   modal: false,
+  budgetModal: false,
   expense: localStorageExpense(),
   editingId: '',
   currentCategory: ''
@@ -53,6 +58,30 @@ export const budgetReducer = (
     return {
       ...state,
       budget: action.payload.budget,
+      budgetModal: false
+    };
+  }
+
+  if (action.type === 'update-budget') {
+    return {
+      ...state,
+      budget: state.budget + action.payload.budgetUpdate, // Actualiza el presupuesto original
+      budgetModal: false,
+    };
+  }
+
+  if (action.type === 'show-modal-budget') {
+    return {
+      ...state,
+      budgetModal: true,
+    };
+  }
+
+  if (action.type === 'close-modal-budget') {
+    return {
+      ...state,
+      budgetModal: false,
+      editingId: ''
     };
   }
 

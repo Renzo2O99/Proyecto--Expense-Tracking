@@ -24,7 +24,7 @@ export const FilterByCategory = () => {
           onChange={handleChange}
           className="bg-slate-100 p-3 flex-1 rounded"
           id="category">
-            <option value="">
+            <option className="text-center" value="">
               --&gt; Todas las categorías &lt;--
             </option>
 

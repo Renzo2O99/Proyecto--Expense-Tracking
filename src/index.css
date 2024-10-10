@@ -13,6 +13,19 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.glass-header {
+  background: rgba( 255, 255, 255, 0.15 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.background-home {
+  background-image: linear-gradient(to left top, #cc1253, #c0005f, #b2006a, #a00075, #8a007e, #800087, #740090, #63009a, #6000a7, #5a00b5, #5000c4, #4000d3);
+}
+
 /*** SWIPE LIST OVERRIDES **/
 .swipeable-list-item__leading-actions, 
 .swipeable-list-item__trailing-actions {
