@@ -39,7 +39,7 @@ function App() {
       </motion.header>
 
       <motion.div 
-        className={`relative bg-white shadow-lg ${isValidBudget ? 'mt-10 rounded-lg' : 'background-home min-h-screen flex items-center justify-center'}`}
+        className={`relative bg-white shadow-lg ${isValidBudget ? 'mt-10 rounded-lg md:mx-16 md:my-10' : 'background-home min-h-screen flex items-center justify-center'}`}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3, duration: 0.5 }}

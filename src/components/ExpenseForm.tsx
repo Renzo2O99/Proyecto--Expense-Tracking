@@ -99,7 +99,7 @@ export const ExpenseForm = () => {
     <form
       className="space-y-5 md:mx-4"
       onSubmit={handleSubmit}>
-      <legend className="uppercase text-center text-2xl font-black border-b-4 border-blue-500 py-2 md:mx-auto md:w-1/3">
+      <legend className="text-center mx-auto uppercase text-2xl font-black border-b-4 border-blue-500 py-2 md:w-2/3">
         {state.editingId ? 'Guardar Cambios' : 'Nuevo Gasto'}
       </legend>
 
@@ -126,41 +126,47 @@ export const ExpenseForm = () => {
           onChange={handleChange}
           value={expense.expenseName}
           placeholder="Agregue un nombre..."
-          className="bg-slate-100 p-2"
+          className="pl-6 pr-4 py-2 w-full text-md md:text-lg rounded-lg border-2 border-gray-300 focus:border-purple-900 focus:ring focus:ring-purple-200 focus-visible:outline-none transition duration-200"
         />
       </div>
 
-      <div className="flex flex-col justify-center gap-2 pt-2 md:pt-5">
+      <div className="relative flex flex-col gap-2 pt-2">
         <label 
           htmlFor="expenseAmount"
-          className="font-bold text-lg md:text-xl"
-        >
+          className="font-bold text-lg md:text-xl">
           Añadir el Monto del Gasto:
         </label>
 
-        <input 
-          type="number" 
+        <span className="absolute left-3 top-[75%] transform -translate-y-1/2 text-gray-400">
+          $
+        </span>
+
+        <input
+          required
+          type="number"
           id="expenseAmount"
           name="expenseAmount"
           onChange={handleChange}
-          value={expense.expenseAmount === 0 ? '' : expense.expenseAmount}
-          className="bg-slate-100 p-2"
           placeholder="Agregue una cantidad..."
+          value={expense.expenseAmount === 0 ? '' : expense.expenseAmount}
+          className="pl-6 pr-4 py-2 md:pt-2 w-full text-md md:text-lg rounded-lg border-2 border-gray-300 focus:border-purple-900 focus:ring focus:ring-purple-200 focus-visible:outline-none transition duration-200"
+
         />
       </div>
 
-      <div className="flex flex-col gap-2 pt-2 md:pt-5">
+
+
+      <div className="flex flex-col gap-2 pt-2">
         <label 
           htmlFor="expenseCategory"
-          className="font-bold text-lg md:text-xl"
-        >
+          className="font-bold text-lg md:text-xl">
           Añadir la Categoría del Gasto:
         </label>
 
         <select 
           id="expenseCategory"
           name="expenseCategory"
-          className="bg-slate-100 p-2"
+          className="pl-2 md:pl-4 pr-4 py-2 w-full text-md md:text-lg rounded-lg border-2 border-gray-300 focus:border-purple-900 focus:ring focus:ring-purple-200 focus-visible:outline-none transition duration-200"
           value={expense.expenseCategory === '' ? selectedOption : expense.expenseCategory}
           onChange={handleChange}>
           <option
@@ -194,7 +200,7 @@ export const ExpenseForm = () => {
           name="expenseAmount"
           onChange={handleChangeDate}
           value={expense.expenseDate}
-          className="bg-slate-100 p-1 border-0"
+          className="w-full text-md md:text-lg rounded-lg focus:border-purple-900 focus:ring focus-visible:outline-none transition duration-200"
         />
       </div>
 

@@ -22,7 +22,7 @@ export const FilterByCategory = () => {
 
           <select 
           onChange={handleChange}
-          className="bg-slate-100 p-3 flex-1 rounded"
+          className="flex-1 bg-slate-100 p-3 w-full text-md md:text-lg rounded-lg border-2 border-gray-300 focus:border-purple-900 focus:ring focus:ring-purple-200 focus-visible:outline-none transition duration-200"
           id="category">
             <option className="text-center" value="">
               --&gt; Todas las categorías &lt;--

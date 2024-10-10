@@ -14,13 +14,13 @@ export const BudgetTracker = () => {
 
   return (
     <motion.div 
-      className="pb-10 grid grid-cols-1 md:grid-cols-2 md:py-10 gap-5"
+      className="pb-10 grid grid-cols-1 md:grid-cols-2 md:p-16 gap-5"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
       <motion.div 
-        className="flex justify-center px-5"
+        className="flex justify-center px-5 md:m-8"
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.5 }}
